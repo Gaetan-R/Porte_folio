@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des projets{% endblock %}
+
+{% block body %}
+
+    <h1>Mes différents projets</h1>
+
+{% for projets in projets %}
+
+
+    <div class="container">
+        <!-- Top Navigation -->
+        <div class="content">
+            <div class="grid">
+                <figure class="effect-bubba">
+                    <img src="{{projets.poster}}" alt="{{ projets.nom }} poster">
+                    <figcaption>
+                        <h2>Projet <span>{{ projets.nom }}</span></h2>
+                        <p>{{ projets.description }}</p>
+                        <a class="buy" href="{{ path('projet_show', {projetId : projets.id }) }}">Voir</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+{% endfor %}
+
+{% endblock %}

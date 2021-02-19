@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Porjet : {{ projet.nom }}{% endblock %}
+
+{% block body %}
+
+    <h1 class="mt-0">{{ projet.nom }}</h1>
+    <img src="{{projet.poster}}" alt="{{ projet.nom }} poster">
+     <p>{{ projet.description }}</p>
+
+
+
+{% endblock %}
